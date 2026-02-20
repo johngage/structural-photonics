@@ -1,11 +1,11 @@
-# Structural Photonics Website
+# Linken Sensing Website
 
-Professional website for Structural Photonics - Critical infrastructure monitoring through distributed fiber optic sensing.
+Professional website for Linken Sensing - Bridging infrastructure and affordable sensing solutions through distributed fiber optic sensing (DFOS).
 
 ## Project Structure
 
 ```
-structural-photonics/
+linken-sensing/
 ├── index.html              # Home page
 ├── css/
 │   └── styles.css          # Main stylesheet
@@ -29,7 +29,7 @@ This is a static site with no build process required. To preview locally:
 
 ### Option 1: Python (built-in on macOS/Linux)
 ```bash
-cd structural-photonics
+cd linken-sensing
 python3 -m http.server 8000
 ```
 Then open http://localhost:8000
@@ -50,9 +50,9 @@ Install the "Live Server" extension and click "Go Live"
    ```bash
    git init
    git add .
-   git commit -m "Initial commit: Structural Photonics website"
+   git commit -m "Initial commit: Linken Sensing website"
    git branch -M main
-   git remote add origin https://github.com/YOUR_USERNAME/structural-photonics.git
+   git remote add origin https://github.com/YOUR_USERNAME/linken-sensing.git
    git push -u origin main
    ```
 
@@ -69,7 +69,7 @@ Install the "Live Server" extension and click "Go Live"
 
 3. **Configure Custom Domain (Optional):**
    - In your Pages project, go to **Custom domains**
-   - Add `structuralphotonics.com` (or your domain)
+   - Add `linkensensing.com` (or your domain)
    - Update your domain's DNS to point to Cloudflare
 
 ### Method 2: Direct Upload
@@ -139,4 +139,4 @@ The site is optimized for performance:
 
 ## License
 
-Copyright 2025 Structural Photonics, Inc. All rights reserved.
+Copyright 2025 Linken Sensing. All rights reserved.
