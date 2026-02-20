@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="About Structural Photonics - our mission, Berkeley SkyDeck incubation, NSF funding, and company milestones in infrastructure monitoring innovation.">
+  <title>About | Structural Photonics</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/styles.css">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect fill='%232563eb' rx='15' width='100' height='100'/><path d='M25 50 Q50 20 75 50 Q50 80 25 50' stroke='white' stroke-width='6' fill='none'/><circle cx='50' cy='50' r='8' fill='white'/></svg>">
+
+  <style>
+    .mission-section {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: var(--space-12);
+      align-items: center;
+    }
+    .mission-content h2 {
+      margin-bottom: var(--space-6);
+    }
+    .mission-content p {
+      color: var(--gray-600);
+      font-size: 1.0625rem;
+      margin-bottom: var(--space-4);
+    }
+    .mission-visual {
+      background: linear-gradient(135deg, var(--primary-100), var(--primary-50));
+      border-radius: var(--radius-xl);
+      padding: var(--space-12);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      min-height: 350px;
+    }
+    .mission-visual svg {
+      width: 80px;
+      height: 80px;
+      color: var(--primary-500);
+      margin-bottom: var(--space-6);
+    }
+    .mission-visual blockquote {
+      font-size: 1.25rem;
+      font-weight: 500;
+      color: var(--primary-800);
+      font-style: italic;
+      line-height: 1.5;
+      max-width: 300px;
+    }
+    .partners-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: var(--space-8);
+    }
+    .partner-card {
+      background: white;
+      border: 1px solid var(--gray-200);
+      border-radius: var(--radius-lg);
+      padding: var(--space-8);
+      text-align: center;
+    }
+    .partner-card h3 {
+      font-size: 1.125rem;
+      margin-bottom: var(--space-2);
+    }
+    .partner-card p {
+      color: var(--gray-600);
+      font-size: 0.9375rem;
+      margin-bottom: 0;
+    }
+    .partner-logo {
+      width: 80px;
+      height: 80px;
+      background: var(--gray-100);
+      border-radius: var(--radius-md);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto var(--space-4);
+    }
+    .partner-logo svg {
+      width: 40px;
+      height: 40px;
+      color: var(--gray-500);
+    }
+    .status-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: var(--space-6);
+      margin-top: var(--space-12);
+    }
+    .status-card {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: var(--radius-lg);
+      padding: var(--space-6);
+      text-align: center;
+    }
+    .status-card h4 {
+      color: white;
+      font-size: 1rem;
+      margin-bottom: var(--space-2);
+    }
+    .status-card p {
+      color: var(--primary-300);
+      font-size: 0.875rem;
+      margin-bottom: 0;
+    }
+    .status-icon {
+      width: 48px;
+      height: 48px;
+      background: var(--primary-500);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto var(--space-4);
+    }
+    .status-icon svg {
+      width: 24px;
+      height: 24px;
+      color: white;
+    }
+    @media (max-width: 768px) {
+      .mission-section {
+        grid-template-columns: 1fr;
+      }
+      .partners-grid,
+      .status-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header class="header" id="header">
+    <div class="container">
+      <div class="header-inner">
+        <a href="../index.html" class="logo">
+          <div class="logo-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M2 12 Q12 4 22 12 Q12 20 2 12" />
+              <circle cx="12" cy="12" r="3" />
+            </svg>
+          </div>
+          <span>Structural Photonics</span>
+        </a>
+
+        <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <nav class="nav" id="nav">
+          <ul class="nav-links">
+            <li><a href="../index.html" class="nav-link">Home</a></li>
+            <li><a href="technology.html" class="nav-link">Technology</a></li>
+            <li><a href="applications.html" class="nav-link">Applications</a></li>
+            <li><a href="team.html" class="nav-link">Team</a></li>
+            <li><a href="about.html" class="nav-link active">About</a></li>
+          </ul>
+          <a href="contact.html" class="nav-cta">
+            Contact Us
+            <svg viewBox="0 0 20 20" fill="currentColor">
+              <path fill-rule="evenodd" d="M3 10a.75.75 0 01.75-.75h10.638L10.23 5.29a.75.75 0 111.04-1.08l5.5 5.25a.75.75 0 010 1.08l-5.5 5.25a.75.75 0 11-1.04-1.08l4.158-3.96H3.75A.75.75 0 013 10z" clip-rule="evenodd" />
+            </svg>
+          </a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <!-- Page Header -->
+  <section class="page-header">
+    <div class="container">
+      <h1>About Structural Photonics</h1>
+      <p>Building the future of infrastructure monitoring from Berkeley, California.</p>
+    </div>
+  </section>
+
+  <!-- Mission Section -->
+  <section class="section section-light">
+    <div class="container">
+      <div class="mission-section">
+        <div class="mission-content">
+          <span class="section-label">Our Mission</span>
+          <h2>Preventing Infrastructure Failures Before They Happen</h2>
+          <p>
+            Critical infrastructure underpins modern society—roads carry commerce, pipelines deliver energy, bridges connect communities. Yet much of this infrastructure operates without continuous monitoring, leaving failures undetected until they become dangerous.
+          </p>
+          <p>
+            Structural Photonics is changing this paradigm. We're developing distributed fiber optic sensing technology that transforms existing fiber networks into intelligent monitoring systems, providing real-time awareness of infrastructure conditions across vast networks.
+          </p>
+          <p>
+            Our mission is to make comprehensive infrastructure monitoring economically viable and technically practical, protecting both public safety and critical services.
+          </p>
+        </div>
+        <div class="mission-visual">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M2 12 Q12 4 22 12 Q12 20 2 12" />
+            <circle cx="12" cy="12" r="3" />
+            <circle cx="12" cy="12" r="1" fill="currentColor"/>
+          </svg>
+          <blockquote>
+            "Seeing what was invisible, preventing what was inevitable."
+          </blockquote>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Partners & Support -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">Support & Partnership</span>
+        <h2>Backed by Leading Institutions</h2>
+        <p>Our technology development is supported by prestigious research institutions and accelerators.</p>
+      </div>
+
+      <div class="partners-grid">
+        <div class="partner-card fade-in">
+          <div class="partner-logo">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M4.26 10.147a60.436 60.436 0 00-.491 6.347A48.627 48.627 0 0112 20.904a48.627 48.627 0 018.232-4.41 60.46 60.46 0 00-.491-6.347m-15.482 0a50.57 50.57 0 00-2.658-.813A59.905 59.905 0 0112 3.493a59.902 59.902 0 0110.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.697 50.697 0 0112 13.489a50.702 50.702 0 017.74-3.342M6.75 15a.75.75 0 100-1.5.75.75 0 000 1.5zm0 0v-3.675A55.378 55.378 0 0112 8.443m-7.007 11.55A5.981 5.981 0 006.75 15.75v-1.5"/>
+            </svg>
+          </div>
+          <h3>Berkeley SkyDeck</h3>
+          <p>Selected for UC Berkeley's premier startup accelerator, providing access to world-class mentorship, resources, and the Berkeley research ecosystem.</p>
+        </div>
+
+        <div class="partner-card fade-in">
+          <div class="partner-logo">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M12 6v12m-3-2.818l.879.659c1.171.879 3.07.879 4.242 0 1.172-.879 1.172-2.303 0-3.182C13.536 12.219 12.768 12 12 12c-.725 0-1.45-.22-2.003-.659-1.106-.879-1.106-2.303 0-3.182s2.9-.879 4.006 0l.415.33M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+            </svg>
+          </div>
+          <h3>NSF Funding</h3>
+          <p>Awarded National Science Foundation funding for distributed sensing research, validating the scientific merit and commercial potential of our approach.</p>
+        </div>
+
+        <div class="partner-card fade-in">
+          <div class="partner-logo">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M12 21v-8.25M15.75 21v-8.25M8.25 21v-8.25M3 9l9-6 9 6m-1.5 12V10.332A48.36 48.36 0 0012 9.75c-2.551 0-5.056.2-7.5.582V21M3 21h18M12 6.75h.008v.008H12V6.75z"/>
+            </svg>
+          </div>
+          <h3>UC Berkeley Research</h3>
+          <p>Deep connections to UC Berkeley's engineering programs, with ongoing collaborative research in photonics and structural engineering.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Company Status -->
+  <section class="section section-dark">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">Company Status</span>
+        <h2>Building for the Long Term</h2>
+        <p>Structured for growth with institutional-grade governance.</p>
+      </div>
+
+      <div class="status-grid">
+        <div class="status-card">
+          <div class="status-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z"/>
+            </svg>
+          </div>
+          <h4>Delaware C-Corp</h4>
+          <p>Incorporation pending as a Delaware C-Corporation, the standard structure for venture-backed technology companies.</p>
+        </div>
+
+        <div class="status-card">
+          <div class="status-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M2.25 18.75a60.07 60.07 0 0115.797 2.101c.727.198 1.453-.342 1.453-1.096V18.75M3.75 4.5v.75A.75.75 0 013 6h-.75m0 0v-.375c0-.621.504-1.125 1.125-1.125H20.25M2.25 6v9m18-10.5v.75c0 .414.336.75.75.75h.75m-1.5-1.5h.375c.621 0 1.125.504 1.125 1.125v9.75c0 .621-.504 1.125-1.125 1.125h-.375m1.5-1.5H21a.75.75 0 00-.75.75v.75m0 0H3.75m0 0h-.375a1.125 1.125 0 01-1.125-1.125V15m1.5 1.5v-.75A.75.75 0 003 15h-.75M15 10.5a3 3 0 11-6 0 3 3 0 016 0zm3 0h.008v.008H18V10.5zm-12 0h.008v.008H6V10.5z"/>
+            </svg>
+          </div>
+          <h4>Pre-Seed Stage</h4>
+          <p>Currently in pre-seed stage, focused on technology development and initial customer validation.</p>
+        </div>
+
+        <div class="status-card">
+          <div class="status-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M15 19.128a9.38 9.38 0 002.625.372 9.337 9.337 0 004.121-.952 4.125 4.125 0 00-7.533-2.493M15 19.128v-.003c0-1.113-.285-2.16-.786-3.07M15 19.128v.106A12.318 12.318 0 018.624 21c-2.331 0-4.512-.645-6.374-1.766l-.001-.109a6.375 6.375 0 0111.964-3.07M12 6.375a3.375 3.375 0 11-6.75 0 3.375 3.375 0 016.75 0zm8.25 2.25a2.625 2.625 0 11-5.25 0 2.625 2.625 0 015.25 0z"/>
+            </svg>
+          </div>
+          <h4>10-Person Team</h4>
+          <p>Experienced team across software, photonics, and field operations, building full-stack sensing capability.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Timeline -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">Our Journey</span>
+        <h2>Company Milestones</h2>
+        <p>Key moments in our development from research project to infrastructure monitoring company.</p>
+      </div>
+
+      <div class="timeline">
+        <div class="timeline-item completed fade-in">
+          <div class="timeline-marker"></div>
+          <div class="timeline-content">
+            <div class="timeline-date">Q3 2024</div>
+            <h4>Research Origins</h4>
+            <p>Initial DFOS research begins at UC Berkeley, demonstrating feasibility of high-resolution distributed sensing for infrastructure applications.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item completed fade-in">
+          <div class="timeline-marker"></div>
+          <div class="timeline-content">
+            <div class="timeline-date">Q4 2024</div>
+            <h4>NSF Award</h4>
+            <p>Received National Science Foundation funding to advance distributed sensing research and develop prototype interrogator systems.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item completed fade-in">
+          <div class="timeline-marker"></div>
+          <div class="timeline-content">
+            <div class="timeline-date">Q1 2025</div>
+            <h4>Berkeley SkyDeck Selection</h4>
+            <p>Selected for Berkeley SkyDeck accelerator program, providing mentorship, resources, and connections to the venture ecosystem.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item current fade-in">
+          <div class="timeline-marker"></div>
+          <div class="timeline-content">
+            <div class="timeline-date">Q1 2025</div>
+            <h4>Company Formation</h4>
+            <p>Structural Photonics incorporated as Delaware C-Corp. Team expanded to 10 members across three technical divisions.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item upcoming fade-in">
+          <div class="timeline-marker"></div>
+          <div class="timeline-content">
+            <div class="timeline-date">Q2 2025</div>
+            <h4>Pilot Deployments</h4>
+            <p>First pilot deployments with infrastructure operators, demonstrating real-world monitoring capabilities.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item upcoming fade-in">
+          <div class="timeline-marker"></div>
+          <div class="timeline-content">
+            <div class="timeline-date">Q3 2025</div>
+            <h4>Seed Funding</h4>
+            <p>Seed funding round to scale team and accelerate product development.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="section section-dark">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">Get Involved</span>
+        <h2>Interested in Learning More?</h2>
+        <p>Whether you're a potential customer, partner, or team member, we'd love to hear from you.</p>
+      </div>
+
+      <div class="text-center flex gap-4" style="justify-content: center;">
+        <a href="contact.html" class="btn btn-primary btn-lg">
+          Contact Us
+          <svg viewBox="0 0 20 20" fill="currentColor">
+            <path fill-rule="evenodd" d="M3 10a.75.75 0 01.75-.75h10.638L10.23 5.29a.75.75 0 111.04-1.08l5.5 5.25a.75.75 0 010 1.08l-5.5 5.25a.75.75 0 11-1.04-1.08l4.158-3.96H3.75A.75.75 0 013 10z" clip-rule="evenodd" />
+          </svg>
+        </a>
+        <a href="team.html" class="btn btn-outline btn-lg">
+          Meet the Team
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="../index.html" class="logo">
+            <div class="logo-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M2 12 Q12 4 22 12 Q12 20 2 12" />
+                <circle cx="12" cy="12" r="3" />
+              </svg>
+            </div>
+            <span>Structural Photonics</span>
+          </a>
+          <p>Critical infrastructure monitoring through distributed fiber optic sensing.</p>
+        </div>
+
+        <div>
+          <h4>Technology</h4>
+          <ul class="footer-links">
+            <li><a href="technology.html">How It Works</a></li>
+            <li><a href="technology.html#capabilities">Capabilities</a></li>
+            <li><a href="technology.html#comparison">vs Traditional Sensors</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4>Applications</h4>
+          <ul class="footer-links">
+            <li><a href="applications.html#roads">Roads & Highways</a></li>
+            <li><a href="applications.html#pipelines">Pipelines</a></li>
+            <li><a href="applications.html#bridges">Bridges</a></li>
+            <li><a href="applications.html#tunnels">Tunnels</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4>Company</h4>
+          <ul class="footer-links">
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="team.html">Team</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2025 Structural Photonics, Inc. All rights reserved.</p>
+        <div class="footer-legal">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>

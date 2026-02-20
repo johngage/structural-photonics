@@ -1,0 +1,14 @@
+# Cloudflare Pages Redirects
+
+# Redirect www to non-www (configure in Cloudflare dashboard for production)
+# https://www.structuralphotonics.com/* https://structuralphotonics.com/:splat 301
+
+# Handle trailing slashes
+/technology    /pages/technology.html    200
+/applications  /pages/applications.html  200
+/team          /pages/team.html          200
+/about         /pages/about.html         200
+/contact       /pages/contact.html       200
+
+# Fallback for 404
+/*    /index.html    404

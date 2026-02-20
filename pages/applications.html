@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="DFOS applications for infrastructure monitoring - roads, pipelines, buildings, bridges, and tunnels. Learn how distributed fiber optic sensing protects critical infrastructure.">
+  <title>Applications | Structural Photonics</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/styles.css">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect fill='%232563eb' rx='15' width='100' height='100'/><path d='M25 50 Q50 20 75 50 Q50 80 25 50' stroke='white' stroke-width='6' fill='none'/><circle cx='50' cy='50' r='8' fill='white'/></svg>">
+
+  <style>
+    .application-detail {
+      padding: var(--space-16) 0;
+      border-bottom: 1px solid var(--gray-200);
+    }
+    .application-detail:last-child {
+      border-bottom: none;
+    }
+    .application-detail:nth-child(even) {
+      background: var(--gray-50);
+    }
+    .app-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: var(--space-12);
+      align-items: center;
+    }
+    .application-detail:nth-child(even) .app-grid {
+      direction: rtl;
+    }
+    .application-detail:nth-child(even) .app-grid > * {
+      direction: ltr;
+    }
+    .app-visual {
+      background: linear-gradient(135deg, var(--primary-800), var(--primary-600));
+      border-radius: var(--radius-xl);
+      padding: var(--space-12);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 350px;
+      position: relative;
+      overflow: hidden;
+    }
+    .app-visual::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-image:
+        linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+      background-size: 30px 30px;
+    }
+    .app-visual svg {
+      width: 120px;
+      height: 120px;
+      color: white;
+      opacity: 0.9;
+    }
+    .app-content h2 {
+      margin-bottom: var(--space-4);
+    }
+    .app-content > p {
+      color: var(--gray-600);
+      font-size: 1.0625rem;
+      margin-bottom: var(--space-6);
+    }
+    .capabilities-list {
+      list-style: none;
+      margin-bottom: var(--space-6);
+    }
+    .capabilities-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: var(--space-3);
+      padding: var(--space-3) 0;
+      color: var(--gray-700);
+    }
+    .capabilities-list svg {
+      width: 20px;
+      height: 20px;
+      color: var(--accent-green);
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+    .tech-specs {
+      display: flex;
+      gap: var(--space-6);
+      flex-wrap: wrap;
+      padding-top: var(--space-4);
+      border-top: 1px solid var(--gray-200);
+    }
+    .tech-spec {
+      display: flex;
+      align-items: center;
+      gap: var(--space-2);
+      font-size: 0.875rem;
+      color: var(--gray-600);
+    }
+    .tech-spec strong {
+      color: var(--primary-600);
+      font-family: var(--font-mono);
+    }
+    @media (max-width: 768px) {
+      .app-grid {
+        grid-template-columns: 1fr;
+      }
+      .application-detail:nth-child(even) .app-grid {
+        direction: ltr;
+      }
+      .app-visual {
+        min-height: 250px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header class="header" id="header">
+    <div class="container">
+      <div class="header-inner">
+        <a href="../index.html" class="logo">
+          <div class="logo-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M2 12 Q12 4 22 12 Q12 20 2 12" />
+              <circle cx="12" cy="12" r="3" />
+            </svg>
+          </div>
+          <span>Structural Photonics</span>
+        </a>
+
+        <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <nav class="nav" id="nav">
+          <ul class="nav-links">
+            <li><a href="../index.html" class="nav-link">Home</a></li>
+            <li><a href="technology.html" class="nav-link">Technology</a></li>
+            <li><a href="applications.html" class="nav-link active">Applications</a></li>
+            <li><a href="team.html" class="nav-link">Team</a></li>
+            <li><a href="about.html" class="nav-link">About</a></li>
+          </ul>
+          <a href="contact.html" class="nav-cta">
+            Contact Us
+            <svg viewBox="0 0 20 20" fill="currentColor">
+              <path fill-rule="evenodd" d="M3 10a.75.75 0 01.75-.75h10.638L10.23 5.29a.75.75 0 111.04-1.08l5.5 5.25a.75.75 0 010 1.08l-5.5 5.25a.75.75 0 11-1.04-1.08l4.158-3.96H3.75A.75.75 0 013 10z" clip-rule="evenodd" />
+            </svg>
+          </a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <!-- Page Header -->
+  <section class="page-header">
+    <div class="container">
+      <h1>Infrastructure Applications</h1>
+      <p>Distributed fiber optic sensing adapts to protect diverse infrastructure types, each with specialized detection algorithms and monitoring capabilities.</p>
+    </div>
+  </section>
+
+  <!-- Roads & Highways -->
+  <section class="application-detail" id="roads">
+    <div class="container">
+      <div class="app-grid">
+        <div class="app-visual">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M9 20H5a2 2 0 01-2-2V6a2 2 0 012-2h4m6 16h4a2 2 0 002-2V6a2 2 0 00-2-2h-4m-6 0v16m6-16v16"/>
+            <circle cx="12" cy="8" r="1" fill="currentColor"/>
+            <circle cx="12" cy="12" r="1" fill="currentColor"/>
+            <circle cx="12" cy="16" r="1" fill="currentColor"/>
+          </svg>
+        </div>
+        <div class="app-content">
+          <span class="section-label">Transportation</span>
+          <h2>Roads & Highways</h2>
+          <p>
+            Monitor traffic patterns, detect pavement degradation, and identify subsidence risks across your road network. DFOS transforms existing fiber alongside highways into a continuous sensing system.
+          </p>
+
+          <ul class="capabilities-list">
+            <li>
+              <svg viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" />
+              </svg>
+              <span><strong>Traffic Flow Analysis:</strong> Vehicle counting, speed estimation, and congestion detection using acoustic signatures</span>
+            </li>
+            <li>
+              <svg viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" />
+              </svg>
+              <span><strong>Pavement Condition:</strong> Detect developing cracks, potholes, and surface deterioration before they become hazards</span>
+            </li>
+            <li>
+              <svg viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" />
+              </svg>
+              <span><strong>Subsidence Detection:</strong> Early warning of ground movement, sinkholes, and undermining beneath roadways</span>
+            </li>
+            <li>
+              <svg viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" />
+              </svg>
+              <span><strong>Weather Impact:</strong> Monitor freeze-thaw cycles and thermal stress on pavement structures</span>
+            </li>
+          </ul>
+
+          <div class="tech-specs">
+            <div class="tech-spec">Resolution: <strong>1m</strong></div>
+            <div class="tech-spec">Coverage: <strong>50km/unit</strong></div>
+            <div class="tech-spec">Update rate: <strong>Real-time</strong></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pipelines -->
+  <section class="application-detail" id="pipelines">
+    <div class="container">
+      <div class="app-grid">
+        <div class="app-visual">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M12 3v18"/>
+            <path d="M8 7h8"/>
+            <path d="M6 12h12"/>
+            <path d="M8 17h8"/>
+            <circle cx="12" cy="3" r="2"/>
+            <circle cx="12" cy="21" r="2"/>
+          </svg>
+        </div>
+        <div class="app-content">
+          <span class="section-label">Energy & Utilities</span>
+          <h2>Pipelines</h2>
+          <p>
+            Protect oil, gas, and water pipelines with continuous monitoring for leaks, intrusion, and structural integrity. DFOS provides the sensitivity and coverage that point sensors cannot match.
+          </p>
+
+          <ul class="capabilities-list">
+            <li>
+              <svg viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" />
+              </svg>
+              <span><strong>Leak Detection:</strong> Identify leaks as small as 0.1% of flow rate through temperature and acoustic anomalies</span>
+            </li>
+            <li>
+              <svg viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" />
+              </svg>
+              <span><strong>Third-Party Interference:</strong> Detect excavation, drilling, and unauthorized activity near pipeline rights-of-way</span>
+            </li>
+            <li>
+              <svg viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" />
+              </svg>
+              <span><strong>Integrity Monitoring:</strong> Track strain accumulation, ground movement, and structural stress over time</span>
+            </li>
+            <li>
+              <svg viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" />
+              </svg>
+              <span><strong>Flow Profiling:</strong> Monitor flow characteristics and detect anomalies indicating blockages or product changes</span>
+            </li>
+          </ul>
+
+          <div class="tech-specs">
+            <div class="tech-spec">Leak sensitivity: <strong>0.1%</strong></div>
+            <div class="tech-spec">Location accuracy: <strong>±5m</strong></div>
+            <div class="tech-spec">Detection time: <strong>&lt;60s</strong></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Buildings -->
+  <section class="application-detail" id="buildings">
+    <div class="container">
+      <div class="app-grid">
+        <div class="app-visual">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16"/>
+            <path d="M3 21h18"/>
+            <path d="M9 7h1"/>
+            <path d="M14 7h1"/>
+            <path d="M9 11h1"/>
+            <path d="M14 11h1"/>
+            <path d="M9 15h1"/>
+            <path d="M14 15h1"/>
+            <path d="M10 21v-4h4v4"/>
+          </svg>
+        </div>
+        <div class="app-content">
+          <span class="section-label">Structures</span>
+          <h2>Buildings</h2>
+          <p>
+            Monitor building structural health continuously, from foundation settlement to seismic response. Embed fiber during construction or retrofit existing structures for comprehensive monitoring.
+          </p>
+
+          <ul class="capabilities-list">
+            <li>
+              <svg viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" />
+              </svg>
+              <span><strong>Structural Health:</strong> Monitor beam deflection, column strain, and connection stress in real-time</span>
+            </li>
+            <li>
+              <svg viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" />
+              </svg>
+              <span><strong>Seismic Response:</strong> Record building response during earthquakes with high temporal resolution</span>
+            </li>
+            <li>
+              <svg viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" />
+              </svg>
+              <span><strong>Foundation Monitoring:</strong> Detect differential settlement and foundation movement early</span>
+            </li>
+            <li>
+              <svg viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" />
+              </svg>
+              <span><strong>Load Tracking:</strong> Understand occupancy patterns and live load distribution across floors</span>
+            </li>
+          </ul>
+
+          <div class="tech-specs">
+            <div class="tech-spec">Strain resolution: <strong>0.1με</strong></div>
+            <div class="tech-spec">Sampling rate: <strong>10kHz</strong></div>
+            <div class="tech-spec">Coverage: <strong>Full structure</strong></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Bridges -->
+  <section class="application-detail" id="bridges">
+    <div class="container">
+      <div class="app-grid">
+        <div class="app-visual">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M4 10h16"/>
+            <path d="M4 10a2 2 0 01-2-2V6"/>
+            <path d="M20 10a2 2 0 002-2V6"/>
+            <path d="M2 6h20"/>
+            <path d="M6 10v8"/>
+            <path d="M18 10v8"/>
+            <path d="M10 10v8"/>
+            <path d="M14 10v8"/>
+            <path d="M4 18h16"/>
+          </svg>
+        </div>
+        <div class="app-content">
+          <span class="section-label">Civil Infrastructure</span>
+          <h2>Bridges</h2>
+          <p>
+            Comprehensive bridge monitoring covering deck strain, cable tension, pier settlement, and traffic loading. Identify structural issues before they become safety concerns.
+          </p>
+
+          <ul class="capabilities-list">
+            <li>
+              <svg viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" />
+              </svg>
+              <span><strong>Strain Monitoring:</strong> Continuous measurement of deck and girder strain under varying loads</span>
+            </li>
+            <li>
+              <svg viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" />
+              </svg>
+              <span><strong>Cable Tension:</strong> Monitor stay cables and suspension cables for tension changes and fatigue</span>
+            </li>
+            <li>
+              <svg viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" />
+              </svg>
+              <span><strong>Load Assessment:</strong> Weigh-in-motion capability for traffic load characterization</span>
+            </li>
+            <li>
+              <svg viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" />
+              </svg>
+              <span><strong>Early Warning:</strong> Automated alerts when measurements exceed defined thresholds</span>
+            </li>
+          </ul>
+
+          <div class="tech-specs">
+            <div class="tech-spec">Deflection accuracy: <strong>±0.5mm</strong></div>
+            <div class="tech-spec">Load estimation: <strong>±5%</strong></div>
+            <div class="tech-spec">Monitoring: <strong>24/7</strong></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Tunnels -->
+  <section class="application-detail" id="tunnels">
+    <div class="container">
+      <div class="app-grid">
+        <div class="app-visual">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <ellipse cx="12" cy="12" rx="10" ry="8"/>
+            <ellipse cx="12" cy="12" rx="6" ry="4"/>
+            <path d="M2 12h4"/>
+            <path d="M18 12h4"/>
+          </svg>
+        </div>
+        <div class="app-content">
+          <span class="section-label">Underground</span>
+          <h2>Tunnels</h2>
+          <p>
+            Monitor tunnel structural integrity, ground movement, and water ingress in real-time. DFOS provides complete coverage of tunnel linings with a single sensing cable.
+          </p>
+
+          <ul class="capabilities-list">
+            <li>
+              <svg viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" />
+              </svg>
+              <span><strong>Ground Movement:</strong> Detect convergence, settlement, and surrounding ground changes</span>
+            </li>
+            <li>
+              <svg viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" />
+              </svg>
+              <span><strong>Water Ingress:</strong> Identify leak locations through temperature anomaly detection</span>
+            </li>
+            <li>
+              <svg viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" />
+              </svg>
+              <span><strong>Structural Safety:</strong> Monitor lining strain and identify developing cracks or joints opening</span>
+            </li>
+            <li>
+              <svg viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" />
+              </svg>
+              <span><strong>Fire Detection:</strong> Rapid temperature rise detection for fire safety systems</span>
+            </li>
+          </ul>
+
+          <div class="tech-specs">
+            <div class="tech-spec">Temperature accuracy: <strong>±0.5°C</strong></div>
+            <div class="tech-spec">Fire detection: <strong>&lt;30s</strong></div>
+            <div class="tech-spec">Coverage: <strong>Full circumference</strong></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="section section-dark">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">Get Started</span>
+        <h2>Discuss Your Infrastructure Monitoring Needs</h2>
+        <p>Our engineering team can assess your specific requirements and design a monitoring solution tailored to your infrastructure.</p>
+      </div>
+
+      <div class="text-center flex gap-4" style="justify-content: center;">
+        <a href="contact.html" class="btn btn-primary btn-lg">
+          Contact Our Team
+          <svg viewBox="0 0 20 20" fill="currentColor">
+            <path fill-rule="evenodd" d="M3 10a.75.75 0 01.75-.75h10.638L10.23 5.29a.75.75 0 111.04-1.08l5.5 5.25a.75.75 0 010 1.08l-5.5 5.25a.75.75 0 11-1.04-1.08l4.158-3.96H3.75A.75.75 0 013 10z" clip-rule="evenodd" />
+          </svg>
+        </a>
+        <a href="technology.html" class="btn btn-outline btn-lg">
+          Learn the Technology
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="../index.html" class="logo">
+            <div class="logo-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M2 12 Q12 4 22 12 Q12 20 2 12" />
+                <circle cx="12" cy="12" r="3" />
+              </svg>
+            </div>
+            <span>Structural Photonics</span>
+          </a>
+          <p>Critical infrastructure monitoring through distributed fiber optic sensing.</p>
+        </div>
+
+        <div>
+          <h4>Technology</h4>
+          <ul class="footer-links">
+            <li><a href="technology.html">How It Works</a></li>
+            <li><a href="technology.html#capabilities">Capabilities</a></li>
+            <li><a href="technology.html#comparison">vs Traditional Sensors</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4>Applications</h4>
+          <ul class="footer-links">
+            <li><a href="#roads">Roads & Highways</a></li>
+            <li><a href="#pipelines">Pipelines</a></li>
+            <li><a href="#bridges">Bridges</a></li>
+            <li><a href="#tunnels">Tunnels</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4>Company</h4>
+          <ul class="footer-links">
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="team.html">Team</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2025 Structural Photonics, Inc. All rights reserved.</p>
+        <div class="footer-legal">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>

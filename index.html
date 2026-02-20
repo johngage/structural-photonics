@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Structural Photonics provides critical infrastructure monitoring through distributed fiber optic sensing. Real-time detection of structural changes, leaks, and anomalies.">
+  <meta name="keywords" content="DFOS, distributed fiber optic sensing, infrastructure monitoring, structural health, pipeline monitoring, bridge monitoring">
+  <title>Structural Photonics | Critical Infrastructure Monitoring</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/styles.css">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect fill='%232563eb' rx='15' width='100' height='100'/><path d='M25 50 Q50 20 75 50 Q50 80 25 50' stroke='white' stroke-width='6' fill='none'/><circle cx='50' cy='50' r='8' fill='white'/></svg>">
+</head>
+<body>
+  <!-- Header -->
+  <header class="header" id="header">
+    <div class="container">
+      <div class="header-inner">
+        <a href="index.html" class="logo">
+          <div class="logo-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M2 12 Q12 4 22 12 Q12 20 2 12" />
+              <circle cx="12" cy="12" r="3" />
+            </svg>
+          </div>
+          <span>Structural Photonics</span>
+        </a>
+
+        <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <nav class="nav" id="nav">
+          <ul class="nav-links">
+            <li><a href="index.html" class="nav-link active">Home</a></li>
+            <li><a href="pages/technology.html" class="nav-link">Technology</a></li>
+            <li><a href="pages/applications.html" class="nav-link">Applications</a></li>
+            <li><a href="pages/team.html" class="nav-link">Team</a></li>
+            <li><a href="pages/about.html" class="nav-link">About</a></li>
+          </ul>
+          <a href="pages/contact.html" class="nav-cta">
+            Contact Us
+            <svg viewBox="0 0 20 20" fill="currentColor">
+              <path fill-rule="evenodd" d="M3 10a.75.75 0 01.75-.75h10.638L10.23 5.29a.75.75 0 111.04-1.08l5.5 5.25a.75.75 0 010 1.08l-5.5 5.25a.75.75 0 11-1.04-1.08l4.158-3.96H3.75A.75.75 0 013 10z" clip-rule="evenodd" />
+            </svg>
+          </a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-content">
+        <div class="hero-badge">
+          <svg viewBox="0 0 20 20" fill="currentColor">
+            <path fill-rule="evenodd" d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z" clip-rule="evenodd" />
+          </svg>
+          Berkeley SkyDeck Portfolio Company
+        </div>
+
+        <h1>Critical Infrastructure Monitoring Through Light</h1>
+
+        <p class="hero-tagline">
+          Distributed fiber optic sensing technology that transforms existing fiber networks into continuous, real-time monitoring systems for roads, pipelines, bridges, and buildings.
+        </p>
+
+        <div class="hero-actions">
+          <a href="pages/technology.html" class="btn btn-primary btn-lg">
+            Explore Our Technology
+            <svg viewBox="0 0 20 20" fill="currentColor">
+              <path fill-rule="evenodd" d="M3 10a.75.75 0 01.75-.75h10.638L10.23 5.29a.75.75 0 111.04-1.08l5.5 5.25a.75.75 0 010 1.08l-5.5 5.25a.75.75 0 11-1.04-1.08l4.158-3.96H3.75A.75.75 0 013 10z" clip-rule="evenodd" />
+            </svg>
+          </a>
+          <a href="pages/contact.html" class="btn btn-outline btn-lg">
+            Request a Demo
+          </a>
+        </div>
+
+        <div class="hero-stats">
+          <div class="hero-stat">
+            <div class="hero-stat-value">50<span class="hero-stat-unit">km</span></div>
+            <div class="hero-stat-label">Monitoring Range</div>
+          </div>
+          <div class="hero-stat">
+            <div class="hero-stat-value">&lt;1<span class="hero-stat-unit">m</span></div>
+            <div class="hero-stat-label">Spatial Resolution</div>
+          </div>
+          <div class="hero-stat">
+            <div class="hero-stat-value">24/7</div>
+            <div class="hero-stat-label">Continuous Monitoring</div>
+          </div>
+          <div class="hero-stat">
+            <div class="hero-stat-value">ms</div>
+            <div class="hero-stat-label">Response Time</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Credibility Bar -->
+  <div class="credibility-bar">
+    <div class="container">
+      <div class="credibility-items">
+        <div class="credibility-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M4.26 10.147a60.436 60.436 0 00-.491 6.347A48.627 48.627 0 0112 20.904a48.627 48.627 0 018.232-4.41 60.46 60.46 0 00-.491-6.347m-15.482 0a50.57 50.57 0 00-2.658-.813A59.905 59.905 0 0112 3.493a59.902 59.902 0 0110.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.697 50.697 0 0112 13.489a50.702 50.702 0 017.74-3.342M6.75 15a.75.75 0 100-1.5.75.75 0 000 1.5zm0 0v-3.675A55.378 55.378 0 0112 8.443m-7.007 11.55A5.981 5.981 0 006.75 15.75v-1.5" />
+          </svg>
+          <span><strong>Berkeley SkyDeck</strong> Incubation</span>
+        </div>
+        <div class="credibility-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M12 6v12m-3-2.818l.879.659c1.171.879 3.07.879 4.242 0 1.172-.879 1.172-2.303 0-3.182C13.536 12.219 12.768 12 12 12c-.725 0-1.45-.22-2.003-.659-1.106-.879-1.106-2.303 0-3.182s2.9-.879 4.006 0l.415.33M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+          </svg>
+          <span><strong>NSF</strong> Funded Research</span>
+        </div>
+        <div class="credibility-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z" />
+          </svg>
+          <span><strong>Delaware C-Corp</strong> Incorporation</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Problem / Solution Section -->
+  <section class="section section-light">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">The Challenge</span>
+        <h2>Infrastructure Monitoring Is Broken</h2>
+        <p>Critical infrastructure failures cause billions in damages annually. Current monitoring approaches leave dangerous blind spots.</p>
+      </div>
+
+      <div class="problem-solution">
+        <div class="problem-box">
+          <h3>
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="10"/>
+              <line x1="15" y1="9" x2="9" y2="15"/>
+              <line x1="9" y1="9" x2="15" y2="15"/>
+            </svg>
+            Current Problems
+          </h3>
+          <ul class="problem-list">
+            <li>Point sensors create coverage gaps between measurement locations</li>
+            <li>Manual inspections are infrequent and miss developing issues</li>
+            <li>Traditional sensors degrade and require costly maintenance</li>
+            <li>Retrofitting existing infrastructure is expensive and disruptive</li>
+            <li>No real-time alerting for sudden structural changes</li>
+            <li>Data silos prevent comprehensive infrastructure analysis</li>
+          </ul>
+        </div>
+
+        <div class="solution-box">
+          <h3>
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+              <polyline points="22 4 12 14.01 9 11.01"/>
+            </svg>
+            Our Solution
+          </h3>
+          <ul class="solution-list">
+            <li>Continuous sensing along the entire fiber length—no gaps</li>
+            <li>Real-time monitoring with millisecond response times</li>
+            <li>Passive optical fiber requires minimal maintenance</li>
+            <li>Leverages existing telecommunications fiber infrastructure</li>
+            <li>Instant alerts when anomalies are detected</li>
+            <li>Unified platform for all infrastructure types</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Technology Overview -->
+  <section class="section section-dark">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">Our Technology</span>
+        <h2>Distributed Fiber Optic Sensing</h2>
+        <p>Transform kilometers of optical fiber into thousands of virtual sensors, detecting strain, temperature, and acoustic signals with unprecedented precision.</p>
+      </div>
+
+      <div class="specs-grid">
+        <div class="spec-card">
+          <div class="spec-value">50<span class="spec-unit">km</span></div>
+          <div class="spec-label">Single-Unit Range</div>
+        </div>
+        <div class="spec-card">
+          <div class="spec-value">0.5<span class="spec-unit">m</span></div>
+          <div class="spec-label">Spatial Resolution</div>
+        </div>
+        <div class="spec-card">
+          <div class="spec-value">10k<span class="spec-unit">Hz</span></div>
+          <div class="spec-label">Sampling Rate</div>
+        </div>
+        <div class="spec-card">
+          <div class="spec-value">0.1<span class="spec-unit">με</span></div>
+          <div class="spec-label">Strain Sensitivity</div>
+        </div>
+      </div>
+
+      <div class="text-center mt-12">
+        <a href="pages/technology.html" class="btn btn-primary btn-lg">
+          Learn How It Works
+          <svg viewBox="0 0 20 20" fill="currentColor">
+            <path fill-rule="evenodd" d="M3 10a.75.75 0 01.75-.75h10.638L10.23 5.29a.75.75 0 111.04-1.08l5.5 5.25a.75.75 0 010 1.08l-5.5 5.25a.75.75 0 11-1.04-1.08l4.158-3.96H3.75A.75.75 0 013 10z" clip-rule="evenodd" />
+          </svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Applications Preview -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">Applications</span>
+        <h2>Protecting Critical Infrastructure</h2>
+        <p>Our technology adapts to monitor diverse infrastructure types, each with specialized detection algorithms.</p>
+      </div>
+
+      <div class="feature-grid">
+        <div class="card fade-in">
+          <div class="card-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M9 20H5a2 2 0 01-2-2V6a2 2 0 012-2h4m6 16h4a2 2 0 002-2V6a2 2 0 00-2-2h-4m-6 0v16m6-16v16"/>
+            </svg>
+          </div>
+          <h3>Roads & Highways</h3>
+          <p>Traffic flow analysis, pavement condition monitoring, and subsidence detection for transportation networks.</p>
+        </div>
+
+        <div class="card fade-in">
+          <div class="card-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M12 3v18m-6-6l6 6 6-6M4 8h16"/>
+            </svg>
+          </div>
+          <h3>Pipelines</h3>
+          <p>Leak detection, third-party interference alerts, and integrity monitoring for oil, gas, and water pipelines.</p>
+        </div>
+
+        <div class="card fade-in">
+          <div class="card-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0H5m14 0h2m-2 0a2 2 0 01-2 2H7a2 2 0 01-2-2m0 0H3m8-10V7m0 4v6"/>
+            </svg>
+          </div>
+          <h3>Buildings</h3>
+          <p>Structural health monitoring, seismic response analysis, and foundation settlement tracking.</p>
+        </div>
+
+        <div class="card fade-in">
+          <div class="card-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M4 10h16M4 10a2 2 0 01-2-2V6a2 2 0 012-2h16a2 2 0 012 2v2a2 2 0 01-2 2M4 10v8a2 2 0 002 2h12a2 2 0 002-2v-8"/>
+            </svg>
+          </div>
+          <h3>Bridges</h3>
+          <p>Strain monitoring, load assessment, cable tension analysis, and early warning systems for structural issues.</p>
+        </div>
+
+        <div class="card fade-in">
+          <div class="card-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M12 3C7.03 3 3 7.03 3 12h4c0-2.76 2.24-5 5-5s5 2.24 5 5c0 2.76-2.24 5-5 5v4c4.97 0 9-4.03 9-9s-4.03-9-9-9z"/>
+            </svg>
+          </div>
+          <h3>Tunnels</h3>
+          <p>Ground movement detection, water ingress monitoring, and structural safety assessment.</p>
+        </div>
+
+        <div class="card fade-in">
+          <div class="card-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M13 10V3L4 14h7v7l9-11h-7z"/>
+            </svg>
+          </div>
+          <h3>Power Infrastructure</h3>
+          <p>Cable monitoring, transformer health assessment, and grid stability analysis.</p>
+        </div>
+      </div>
+
+      <div class="text-center mt-12">
+        <a href="pages/applications.html" class="btn btn-secondary btn-lg">
+          View All Applications
+          <svg viewBox="0 0 20 20" fill="currentColor">
+            <path fill-rule="evenodd" d="M3 10a.75.75 0 01.75-.75h10.638L10.23 5.29a.75.75 0 111.04-1.08l5.5 5.25a.75.75 0 010 1.08l-5.5 5.25a.75.75 0 11-1.04-1.08l4.158-3.96H3.75A.75.75 0 013 10z" clip-rule="evenodd" />
+          </svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="section section-dark">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">Get Started</span>
+        <h2>Ready to Transform Your Infrastructure Monitoring?</h2>
+        <p>Contact us to discuss how distributed fiber optic sensing can address your specific monitoring challenges.</p>
+      </div>
+
+      <div class="text-center">
+        <a href="pages/contact.html" class="btn btn-primary btn-lg">
+          Schedule a Consultation
+          <svg viewBox="0 0 20 20" fill="currentColor">
+            <path fill-rule="evenodd" d="M3 10a.75.75 0 01.75-.75h10.638L10.23 5.29a.75.75 0 111.04-1.08l5.5 5.25a.75.75 0 010 1.08l-5.5 5.25a.75.75 0 11-1.04-1.08l4.158-3.96H3.75A.75.75 0 013 10z" clip-rule="evenodd" />
+          </svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="logo">
+            <div class="logo-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M2 12 Q12 4 22 12 Q12 20 2 12" />
+                <circle cx="12" cy="12" r="3" />
+              </svg>
+            </div>
+            <span>Structural Photonics</span>
+          </a>
+          <p>Critical infrastructure monitoring through distributed fiber optic sensing. Transforming fiber networks into intelligent monitoring systems.</p>
+        </div>
+
+        <div>
+          <h4>Technology</h4>
+          <ul class="footer-links">
+            <li><a href="pages/technology.html">How It Works</a></li>
+            <li><a href="pages/technology.html#capabilities">Capabilities</a></li>
+            <li><a href="pages/technology.html#comparison">vs Traditional Sensors</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4>Applications</h4>
+          <ul class="footer-links">
+            <li><a href="pages/applications.html#roads">Roads & Highways</a></li>
+            <li><a href="pages/applications.html#pipelines">Pipelines</a></li>
+            <li><a href="pages/applications.html#bridges">Bridges</a></li>
+            <li><a href="pages/applications.html#tunnels">Tunnels</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4>Company</h4>
+          <ul class="footer-links">
+            <li><a href="pages/about.html">About Us</a></li>
+            <li><a href="pages/team.html">Team</a></li>
+            <li><a href="pages/contact.html">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2025 Structural Photonics, Inc. All rights reserved.</p>
+        <div class="footer-legal">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

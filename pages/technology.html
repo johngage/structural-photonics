@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Learn about Distributed Fiber Optic Sensing (DFOS) technology - how it works, its capabilities, and advantages over traditional point sensors.">
+  <title>Technology | Structural Photonics</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/styles.css">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect fill='%232563eb' rx='15' width='100' height='100'/><path d='M25 50 Q50 20 75 50 Q50 80 25 50' stroke='white' stroke-width='6' fill='none'/><circle cx='50' cy='50' r='8' fill='white'/></svg>">
+</head>
+<body>
+  <!-- Header -->
+  <header class="header" id="header">
+    <div class="container">
+      <div class="header-inner">
+        <a href="../index.html" class="logo">
+          <div class="logo-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M2 12 Q12 4 22 12 Q12 20 2 12" />
+              <circle cx="12" cy="12" r="3" />
+            </svg>
+          </div>
+          <span>Structural Photonics</span>
+        </a>
+
+        <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <nav class="nav" id="nav">
+          <ul class="nav-links">
+            <li><a href="../index.html" class="nav-link">Home</a></li>
+            <li><a href="technology.html" class="nav-link active">Technology</a></li>
+            <li><a href="applications.html" class="nav-link">Applications</a></li>
+            <li><a href="team.html" class="nav-link">Team</a></li>
+            <li><a href="about.html" class="nav-link">About</a></li>
+          </ul>
+          <a href="contact.html" class="nav-cta">
+            Contact Us
+            <svg viewBox="0 0 20 20" fill="currentColor">
+              <path fill-rule="evenodd" d="M3 10a.75.75 0 01.75-.75h10.638L10.23 5.29a.75.75 0 111.04-1.08l5.5 5.25a.75.75 0 010 1.08l-5.5 5.25a.75.75 0 11-1.04-1.08l4.158-3.96H3.75A.75.75 0 013 10z" clip-rule="evenodd" />
+            </svg>
+          </a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <!-- Page Header -->
+  <section class="page-header">
+    <div class="container">
+      <h1>Distributed Fiber Optic Sensing</h1>
+      <p>Transform kilometers of optical fiber into thousands of continuous sensors, detecting minute changes in strain, temperature, and acoustic signals.</p>
+    </div>
+  </section>
+
+  <!-- Technology Overview -->
+  <section class="section section-light">
+    <div class="container">
+      <div class="tech-overview">
+        <div class="tech-visual">
+          <div class="fiber-animation">
+            <div class="fiber-line"></div>
+            <div class="fiber-pulse"></div>
+          </div>
+        </div>
+        <div class="tech-content">
+          <span class="section-label">The Technology</span>
+          <h2>What is DFOS?</h2>
+          <p>
+            Distributed Fiber Optic Sensing (DFOS) uses the optical fiber itself as a continuous sensor. By analyzing how light scatters and reflects within the fiber, we can detect physical changes—strain, temperature, vibration—at any point along its length.
+          </p>
+          <p>
+            Unlike traditional point sensors that monitor discrete locations, DFOS transforms the entire fiber into a sensing medium, eliminating coverage gaps and providing complete awareness of infrastructure conditions.
+          </p>
+          <p>
+            Our system sends precisely timed laser pulses into the fiber and analyzes the returned signal. Changes in the backscattered light reveal exactly what's happening at each location along the fiber, with sub-meter precision over distances exceeding 50 kilometers.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How It Works -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">Technical Process</span>
+        <h2>How DFOS Works</h2>
+        <p>A sophisticated interplay of laser physics, signal processing, and machine learning enables real-time infrastructure monitoring.</p>
+      </div>
+
+      <div class="how-it-works container-narrow">
+        <div class="step fade-in">
+          <div class="step-number">1</div>
+          <div class="step-content">
+            <h4>Laser Pulse Injection</h4>
+            <p>A coherent laser pulse is transmitted into the optical fiber. The pulse characteristics—wavelength, duration, and power—are precisely controlled for optimal sensing performance.</p>
+          </div>
+        </div>
+
+        <div class="step fade-in">
+          <div class="step-number">2</div>
+          <div class="step-content">
+            <h4>Rayleigh Backscattering</h4>
+            <p>As light travels through the fiber, microscopic variations in the glass cause Rayleigh scattering. A small portion of this scattered light returns toward the source, carrying information about local conditions.</p>
+          </div>
+        </div>
+
+        <div class="step fade-in">
+          <div class="step-number">3</div>
+          <div class="step-content">
+            <h4>Phase-Sensitive Detection</h4>
+            <p>Our interrogator unit measures the phase of the returned light with extreme precision. When the fiber experiences strain, temperature change, or vibration, the optical path length changes, shifting the phase of the backscattered signal.</p>
+          </div>
+        </div>
+
+        <div class="step fade-in">
+          <div class="step-number">4</div>
+          <div class="step-content">
+            <h4>Spatial Localization</h4>
+            <p>By measuring the time delay of returned signals (optical time-domain reflectometry), we determine exactly where along the fiber each measurement originates. This enables sub-meter spatial resolution over the entire sensing length.</p>
+          </div>
+        </div>
+
+        <div class="step fade-in">
+          <div class="step-number">5</div>
+          <div class="step-content">
+            <h4>Signal Processing & ML Analysis</h4>
+            <p>Advanced digital signal processing extracts meaningful data from raw measurements. Machine learning algorithms classify events, filter noise, and identify patterns indicative of specific infrastructure conditions.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Key Capabilities -->
+  <section class="section section-dark" id="capabilities">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">Capabilities</span>
+        <h2>Technical Specifications</h2>
+        <p>Industry-leading performance parameters enable detection of subtle infrastructure changes before they become critical failures.</p>
+      </div>
+
+      <div class="specs-grid">
+        <div class="spec-card">
+          <div class="spec-value">50<span class="spec-unit">km</span></div>
+          <div class="spec-label">Sensing Range per Unit</div>
+        </div>
+        <div class="spec-card">
+          <div class="spec-value">0.5<span class="spec-unit">m</span></div>
+          <div class="spec-label">Spatial Resolution</div>
+        </div>
+        <div class="spec-card">
+          <div class="spec-value">10<span class="spec-unit">kHz</span></div>
+          <div class="spec-label">Sampling Frequency</div>
+        </div>
+        <div class="spec-card">
+          <div class="spec-value">0.1<span class="spec-unit">με</span></div>
+          <div class="spec-label">Strain Sensitivity</div>
+        </div>
+      </div>
+
+      <div class="feature-grid mt-12">
+        <div class="card">
+          <div class="card-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M13 10V3L4 14h7v7l9-11h-7z"/>
+            </svg>
+          </div>
+          <h3>Real-Time Monitoring</h3>
+          <p>Continuous data acquisition at up to 10,000 samples per second enables detection of dynamic events including seismic activity, vehicle passages, and sudden structural changes.</p>
+        </div>
+
+        <div class="card">
+          <div class="card-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/>
+            </svg>
+          </div>
+          <h3>Multi-Parameter Sensing</h3>
+          <p>Simultaneously measure strain, temperature, and acoustic signals. Our algorithms separate these parameters to provide clear, actionable data for each measurement type.</p>
+        </div>
+
+        <div class="card">
+          <div class="card-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M4 7v10c0 2 1 3 3 3h10c2 0 3-1 3-3V7c0-2-1-3-3-3H7c-2 0-3 1-3 3z"/>
+              <path d="M12 7v10M7 12h10"/>
+            </svg>
+          </div>
+          <h3>Scalable Architecture</h3>
+          <p>Deploy multiple interrogators to monitor hundreds of kilometers. Our software seamlessly integrates data from distributed units into a unified monitoring platform.</p>
+        </div>
+
+        <div class="card">
+          <div class="card-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+            </svg>
+          </div>
+          <h3>Intrinsic Safety</h3>
+          <p>Optical fiber carries no electrical current, making DFOS intrinsically safe for hazardous environments including oil refineries, chemical plants, and explosive atmospheres.</p>
+        </div>
+
+        <div class="card">
+          <div class="card-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+            </svg>
+          </div>
+          <h3>Long-Term Stability</h3>
+          <p>Optical fiber has no moving parts and doesn't degrade like electronic sensors. Expect decades of reliable operation with minimal maintenance requirements.</p>
+        </div>
+
+        <div class="card">
+          <div class="card-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/>
+              <path d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
+            </svg>
+          </div>
+          <h3>Intelligent Analytics</h3>
+          <p>Machine learning models trained on infrastructure data automatically classify events, suppress false alarms, and predict developing issues before they become failures.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Comparison with Traditional Sensors -->
+  <section class="section" id="comparison">
+    <div class="container container-narrow">
+      <div class="section-header">
+        <span class="section-label">Comparison</span>
+        <h2>DFOS vs Traditional Sensors</h2>
+        <p>Understanding how distributed sensing compares to conventional monitoring approaches.</p>
+      </div>
+
+      <table class="comparison-table">
+        <thead>
+          <tr>
+            <th>Characteristic</th>
+            <th>DFOS</th>
+            <th>Point Sensors</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Coverage</td>
+            <td class="highlight">Continuous along entire length</td>
+            <td>Discrete points only</td>
+          </tr>
+          <tr>
+            <td>Spatial Resolution</td>
+            <td class="highlight">Sub-meter (0.5m typical)</td>
+            <td>Limited by sensor spacing</td>
+          </tr>
+          <tr>
+            <td>Installation Complexity</td>
+            <td class="highlight">Single fiber installation</td>
+            <td>Each sensor requires wiring</td>
+          </tr>
+          <tr>
+            <td>Maintenance</td>
+            <td class="highlight">Minimal (passive fiber)</td>
+            <td>Regular calibration required</td>
+          </tr>
+          <tr>
+            <td>Scalability</td>
+            <td class="highlight">50km+ per interrogator</td>
+            <td>Cost scales with sensor count</td>
+          </tr>
+          <tr>
+            <td>EMI Immunity</td>
+            <td class="highlight">Complete immunity</td>
+            <td>Susceptible to interference</td>
+          </tr>
+          <tr>
+            <td>Hazardous Areas</td>
+            <td class="highlight">Intrinsically safe</td>
+            <td>Special enclosures required</td>
+          </tr>
+          <tr>
+            <td>Multi-Parameter</td>
+            <td class="highlight">Strain, temp, acoustic</td>
+            <td>Typically single parameter</td>
+          </tr>
+          <tr>
+            <td>Existing Infrastructure</td>
+            <td class="highlight">Uses telecom fiber</td>
+            <td>New installation required</td>
+          </tr>
+          <tr>
+            <td>Lifespan</td>
+            <td class="highlight">25+ years</td>
+            <td>5-10 years typical</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- Sensing Types -->
+  <section class="section section-light">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">Sensing Modalities</span>
+        <h2>Types of Distributed Sensing</h2>
+        <p>Different scattering phenomena enable measurement of various physical parameters.</p>
+      </div>
+
+      <div class="feature-grid">
+        <div class="card fade-in">
+          <div class="card-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M13 10V3L4 14h7v7l9-11h-7z"/>
+            </svg>
+          </div>
+          <h3>DAS - Distributed Acoustic Sensing</h3>
+          <p>Detects acoustic and vibrational signals along the fiber. Ideal for traffic monitoring, third-party interference detection, and seismic event recording. Frequency range from mHz to kHz.</p>
+        </div>
+
+        <div class="card fade-in">
+          <div class="card-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2z"/>
+              <path d="M13 5v14"/>
+              <path d="M17 9v10"/>
+              <path d="M21 7v12"/>
+            </svg>
+          </div>
+          <h3>DSS - Distributed Strain Sensing</h3>
+          <p>Measures static and quasi-static strain with high precision. Essential for structural health monitoring, detecting deformation, settlement, and load changes over time.</p>
+        </div>
+
+        <div class="card fade-in">
+          <div class="card-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M12 9v3m0 0v3m0-3h3m-3 0H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z"/>
+            </svg>
+          </div>
+          <h3>DTS - Distributed Temperature Sensing</h3>
+          <p>Monitors temperature profiles along the fiber. Critical for detecting pipeline leaks (temperature anomalies), cable overheating, and fire detection in tunnels and buildings.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="section section-dark">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">Learn More</span>
+        <h2>See How DFOS Applies to Your Infrastructure</h2>
+        <p>Explore specific applications or contact our engineering team for a technical consultation.</p>
+      </div>
+
+      <div class="text-center flex gap-4 justify-center" style="justify-content: center;">
+        <a href="applications.html" class="btn btn-primary btn-lg">
+          View Applications
+        </a>
+        <a href="contact.html" class="btn btn-outline btn-lg">
+          Technical Consultation
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="../index.html" class="logo">
+            <div class="logo-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M2 12 Q12 4 22 12 Q12 20 2 12" />
+                <circle cx="12" cy="12" r="3" />
+              </svg>
+            </div>
+            <span>Structural Photonics</span>
+          </a>
+          <p>Critical infrastructure monitoring through distributed fiber optic sensing.</p>
+        </div>
+
+        <div>
+          <h4>Technology</h4>
+          <ul class="footer-links">
+            <li><a href="technology.html">How It Works</a></li>
+            <li><a href="technology.html#capabilities">Capabilities</a></li>
+            <li><a href="technology.html#comparison">vs Traditional Sensors</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4>Applications</h4>
+          <ul class="footer-links">
+            <li><a href="applications.html#roads">Roads & Highways</a></li>
+            <li><a href="applications.html#pipelines">Pipelines</a></li>
+            <li><a href="applications.html#bridges">Bridges</a></li>
+            <li><a href="applications.html#tunnels">Tunnels</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4>Company</h4>
+          <ul class="footer-links">
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="team.html">Team</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2025 Structural Photonics, Inc. All rights reserved.</p>
+        <div class="footer-legal">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>

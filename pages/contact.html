@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Contact Structural Photonics to discuss infrastructure monitoring solutions, request a demo, or explore partnership opportunities.">
+  <title>Contact | Structural Photonics</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/styles.css">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect fill='%232563eb' rx='15' width='100' height='100'/><path d='M25 50 Q50 20 75 50 Q50 80 25 50' stroke='white' stroke-width='6' fill='none'/><circle cx='50' cy='50' r='8' fill='white'/></svg>">
+
+  <style>
+    .contact-hero {
+      padding: calc(72px + var(--space-16)) 0 var(--space-12);
+      background: linear-gradient(135deg, var(--primary-900), var(--primary-700));
+    }
+    .contact-hero h1 {
+      color: white;
+      margin-bottom: var(--space-4);
+    }
+    .contact-hero p {
+      color: var(--primary-200);
+      font-size: 1.25rem;
+      max-width: 600px;
+    }
+    .contact-section {
+      margin-top: -60px;
+      padding-bottom: var(--space-20);
+    }
+    .contact-wrapper {
+      display: grid;
+      grid-template-columns: 1fr 1.5fr;
+      gap: var(--space-8);
+    }
+    .contact-sidebar {
+      background: white;
+      border-radius: var(--radius-lg);
+      padding: var(--space-8);
+      box-shadow: var(--shadow-lg);
+      border: 1px solid var(--gray-200);
+      height: fit-content;
+    }
+    .contact-sidebar h3 {
+      margin-bottom: var(--space-4);
+    }
+    .contact-sidebar > p {
+      color: var(--gray-600);
+      margin-bottom: var(--space-8);
+    }
+    .contact-method {
+      display: flex;
+      gap: var(--space-4);
+      padding: var(--space-4) 0;
+      border-top: 1px solid var(--gray-200);
+    }
+    .contact-method:first-of-type {
+      border-top: none;
+    }
+    .contact-method-icon {
+      width: 40px;
+      height: 40px;
+      background: var(--primary-100);
+      border-radius: var(--radius-md);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    .contact-method-icon svg {
+      width: 20px;
+      height: 20px;
+      color: var(--primary-600);
+    }
+    .contact-method-content h4 {
+      font-size: 0.9375rem;
+      margin-bottom: var(--space-1);
+    }
+    .contact-method-content p {
+      color: var(--gray-600);
+      font-size: 0.875rem;
+      margin: 0;
+    }
+    .contact-method-content a {
+      color: var(--primary-600);
+    }
+    .response-time {
+      background: var(--primary-50);
+      border-radius: var(--radius-md);
+      padding: var(--space-4);
+      margin-top: var(--space-6);
+    }
+    .response-time p {
+      display: flex;
+      align-items: center;
+      gap: var(--space-2);
+      font-size: 0.875rem;
+      color: var(--primary-700);
+      margin: 0;
+    }
+    .response-time svg {
+      width: 16px;
+      height: 16px;
+    }
+    .form-success {
+      display: none;
+      text-align: center;
+      padding: var(--space-12);
+    }
+    .form-success.show {
+      display: block;
+    }
+    .form-success svg {
+      width: 64px;
+      height: 64px;
+      color: var(--accent-green);
+      margin-bottom: var(--space-4);
+    }
+    .form-success h3 {
+      margin-bottom: var(--space-2);
+    }
+    .form-success p {
+      color: var(--gray-600);
+    }
+    @media (max-width: 768px) {
+      .contact-wrapper {
+        grid-template-columns: 1fr;
+      }
+      .contact-section {
+        margin-top: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header class="header" id="header">
+    <div class="container">
+      <div class="header-inner">
+        <a href="../index.html" class="logo">
+          <div class="logo-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M2 12 Q12 4 22 12 Q12 20 2 12" />
+              <circle cx="12" cy="12" r="3" />
+            </svg>
+          </div>
+          <span>Structural Photonics</span>
+        </a>
+
+        <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <nav class="nav" id="nav">
+          <ul class="nav-links">
+            <li><a href="../index.html" class="nav-link">Home</a></li>
+            <li><a href="technology.html" class="nav-link">Technology</a></li>
+            <li><a href="applications.html" class="nav-link">Applications</a></li>
+            <li><a href="team.html" class="nav-link">Team</a></li>
+            <li><a href="about.html" class="nav-link">About</a></li>
+          </ul>
+          <a href="contact.html" class="nav-cta">
+            Contact Us
+            <svg viewBox="0 0 20 20" fill="currentColor">
+              <path fill-rule="evenodd" d="M3 10a.75.75 0 01.75-.75h10.638L10.23 5.29a.75.75 0 111.04-1.08l5.5 5.25a.75.75 0 010 1.08l-5.5 5.25a.75.75 0 11-1.04-1.08l4.158-3.96H3.75A.75.75 0 013 10z" clip-rule="evenodd" />
+            </svg>
+          </a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="contact-hero">
+    <div class="container">
+      <h1>Contact Us</h1>
+      <p>Ready to discuss how distributed fiber optic sensing can transform your infrastructure monitoring? We'd love to hear from you.</p>
+    </div>
+  </section>
+
+  <!-- Contact Form Section -->
+  <section class="contact-section">
+    <div class="container">
+      <div class="contact-wrapper">
+
+        <!-- Sidebar -->
+        <div class="contact-sidebar">
+          <h3>Get in Touch</h3>
+          <p>Whether you're exploring monitoring solutions, interested in a technical consultation, or have questions about our technology, our team is here to help.</p>
+
+          <div class="contact-method">
+            <div class="contact-method-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75"/>
+              </svg>
+            </div>
+            <div class="contact-method-content">
+              <h4>Email</h4>
+              <p><a href="mailto:contact@structuralphotonics.com">contact@structuralphotonics.com</a></p>
+            </div>
+          </div>
+
+          <div class="contact-method">
+            <div class="contact-method-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z"/>
+                <path d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z"/>
+              </svg>
+            </div>
+            <div class="contact-method-content">
+              <h4>Location</h4>
+              <p>Berkeley SkyDeck<br>2150 Shattuck Ave<br>Berkeley, CA 94704</p>
+            </div>
+          </div>
+
+          <div class="contact-method">
+            <div class="contact-method-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z"/>
+              </svg>
+            </div>
+            <div class="contact-method-content">
+              <h4>Hours</h4>
+              <p>Monday - Friday<br>9:00 AM - 6:00 PM PT</p>
+            </div>
+          </div>
+
+          <div class="response-time">
+            <p>
+              <svg viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd"/>
+              </svg>
+              We typically respond within 24 hours
+            </p>
+          </div>
+        </div>
+
+        <!-- Form -->
+        <div class="contact-form-wrapper">
+          <form id="contactForm">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="name" class="form-label">Full Name *</label>
+                <input type="text" id="name" name="name" class="form-input" required placeholder="John Smith">
+              </div>
+              <div class="form-group">
+                <label for="email" class="form-label">Email Address *</label>
+                <input type="email" id="email" name="email" class="form-input" required placeholder="john@company.com">
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="organization" class="form-label">Organization *</label>
+                <input type="text" id="organization" name="organization" class="form-input" required placeholder="Company or Agency Name">
+              </div>
+              <div class="form-group">
+                <label for="role" class="form-label">Your Role</label>
+                <input type="text" id="role" name="role" class="form-input" placeholder="e.g., Director of Operations">
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="infrastructure" class="form-label">Infrastructure Type</label>
+              <select id="infrastructure" name="infrastructure" class="form-select">
+                <option value="">Select infrastructure type...</option>
+                <option value="roads">Roads & Highways</option>
+                <option value="pipelines">Pipelines (Oil, Gas, Water)</option>
+                <option value="bridges">Bridges</option>
+                <option value="tunnels">Tunnels</option>
+                <option value="buildings">Buildings & Structures</option>
+                <option value="railways">Railways</option>
+                <option value="power">Power Infrastructure</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="interest" class="form-label">What brings you here?</label>
+              <select id="interest" name="interest" class="form-select">
+                <option value="">Select your interest...</option>
+                <option value="demo">Request a Demo</option>
+                <option value="pilot">Discuss Pilot Project</option>
+                <option value="technical">Technical Consultation</option>
+                <option value="partnership">Partnership Opportunity</option>
+                <option value="careers">Career Opportunities</option>
+                <option value="general">General Inquiry</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="message" class="form-label">Message *</label>
+              <textarea id="message" name="message" class="form-textarea" required placeholder="Tell us about your infrastructure monitoring needs or questions..."></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-lg" style="width: 100%;">
+              Send Message
+              <svg viewBox="0 0 20 20" fill="currentColor">
+                <path d="M3.105 2.289a.75.75 0 00-.826.95l1.414 4.925A1.5 1.5 0 005.135 9.25h6.115a.75.75 0 010 1.5H5.135a1.5 1.5 0 00-1.442 1.086l-1.414 4.926a.75.75 0 00.826.95 28.896 28.896 0 0015.293-7.154.75.75 0 000-1.115A28.897 28.897 0 003.105 2.289z"/>
+              </svg>
+            </button>
+          </form>
+
+          <div class="form-success" id="formSuccess">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+            </svg>
+            <h3>Message Sent</h3>
+            <p>Thank you for reaching out. Our team will review your message and respond within 24 hours.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="section section-light">
+    <div class="container container-narrow">
+      <div class="section-header">
+        <span class="section-label">FAQ</span>
+        <h2>Common Questions</h2>
+      </div>
+
+      <div class="how-it-works">
+        <div class="step fade-in" style="grid-template-columns: 1fr;">
+          <div class="step-content">
+            <h4>What types of fiber can be used for sensing?</h4>
+            <p>Our system works with standard single-mode telecommunications fiber. In many cases, existing "dark fiber" in telecom networks can be repurposed for sensing without affecting data traffic on adjacent fibers.</p>
+          </div>
+        </div>
+
+        <div class="step fade-in" style="grid-template-columns: 1fr;">
+          <div class="step-content">
+            <h4>How long does installation typically take?</h4>
+            <p>For existing fiber, deployment can be completed in days. For new fiber installations, timelines depend on the infrastructure type and access requirements. We work closely with customers to minimize disruption.</p>
+          </div>
+        </div>
+
+        <div class="step fade-in" style="grid-template-columns: 1fr;">
+          <div class="step-content">
+            <h4>What is the typical cost compared to point sensors?</h4>
+            <p>DFOS becomes increasingly cost-effective as monitoring length increases. For applications requiring continuous coverage over kilometers, DFOS typically provides 60-80% cost savings compared to equivalent point sensor deployments.</p>
+          </div>
+        </div>
+
+        <div class="step fade-in" style="grid-template-columns: 1fr;">
+          <div class="step-content">
+            <h4>Can you integrate with existing monitoring systems?</h4>
+            <p>Yes. Our platform provides standard APIs and data export capabilities. We can integrate with existing SCADA systems, asset management platforms, and alerting infrastructure.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="../index.html" class="logo">
+            <div class="logo-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M2 12 Q12 4 22 12 Q12 20 2 12" />
+                <circle cx="12" cy="12" r="3" />
+              </svg>
+            </div>
+            <span>Structural Photonics</span>
+          </a>
+          <p>Critical infrastructure monitoring through distributed fiber optic sensing.</p>
+        </div>
+
+        <div>
+          <h4>Technology</h4>
+          <ul class="footer-links">
+            <li><a href="technology.html">How It Works</a></li>
+            <li><a href="technology.html#capabilities">Capabilities</a></li>
+            <li><a href="technology.html#comparison">vs Traditional Sensors</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4>Applications</h4>
+          <ul class="footer-links">
+            <li><a href="applications.html#roads">Roads & Highways</a></li>
+            <li><a href="applications.html#pipelines">Pipelines</a></li>
+            <li><a href="applications.html#bridges">Bridges</a></li>
+            <li><a href="applications.html#tunnels">Tunnels</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4>Company</h4>
+          <ul class="footer-links">
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="team.html">Team</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2025 Structural Photonics, Inc. All rights reserved.</p>
+        <div class="footer-legal">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+  <script>
+    // Form handling
+    document.getElementById('contactForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+
+      // In production, this would submit to a backend service
+      // For now, show success message
+      document.getElementById('contactForm').style.display = 'none';
+      document.getElementById('formSuccess').classList.add('show');
+    });
+  </script>
+</body>
+</html>
